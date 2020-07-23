@@ -1,5 +1,7 @@
 import React from 'react';
 import { observer } from 'mobx-react';
+import Counter from './Counter';
+// import { TodoStoreContext } from './stores/TodoStore';
 
 @observer
 export default class extends React.Component {
@@ -36,7 +38,11 @@ export default class extends React.Component {
                     {todoList}
                 </ul>
 
-                <button onClick={clearComplete}>Clear Completed</button>
+                <button className="btn btn-primary" onClick={clearComplete}>Clear Completed</button>
+
+                <div>
+                    <Counter />
+                </div>
             </div>
         
         )
