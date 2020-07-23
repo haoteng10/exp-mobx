@@ -1,7 +1,7 @@
 import React from 'react';
 import { observer } from 'mobx-react';
 import Counter from './Counter';
-// import { TodoStoreContext } from './stores/TodoStore';
+import './TodoList.css';
 
 @observer
 export default class extends React.Component {
@@ -26,21 +26,31 @@ export default class extends React.Component {
 
         const todoList = filteredTodos.map(todo => (
             <li key={todo.id}>
-                <input type="checkbox" value={todo.complete} checked={todo.complete} onChange={this.toggleComplete.bind(this, todo)}/>{todo.value}
+                <input type="checkbox" value={todo.complete} checked={todo.complete} onChange={this.toggleComplete.bind(this, todo)}/> {todo.value}
             </li>
         ));
+
         return (
-            <div>
-                <h1>Todos</h1>
-                <input onKeyPress={this.createNew.bind(this)} />
-                <input value={filter} onChange={this.filter.bind(this)} />
-                <ul>
-                    {todoList}
-                </ul>
+            <div className="container">
+                <div className="d-flex flex-column align-items-center">
+                    <h1>Todos</h1>
+                    
+                    <div className="form-group">
+                        <label for="createTodoInput">New items</label>
+                        <input id="createTodoInput" className="form-control" onKeyPress={this.createNew.bind(this)} />
+                    </div>
 
-                <button className="btn btn-primary" onClick={clearComplete}>Clear Completed</button>
+                    <div className="form-group">
+                        <label for="clearTodos">Filter items</label>
+                        <input id="clearTodos" className="form-control" value={filter} onChange={this.filter.bind(this)} />
+                    </div>
 
-                <div>
+                    <ul>
+                        {todoList}
+                    </ul>
+
+                    <button className="btn btn-primary" onClick={clearComplete}>Clear Completed</button>
+
                     <Counter />
                 </div>
             </div>
