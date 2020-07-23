@@ -36,12 +36,12 @@ export default class extends React.Component {
                     <h1>Todos</h1>
                     
                     <div className="form-group">
-                        <label for="createTodoInput">New items</label>
+                        <label htmlFor="createTodoInput">New items</label>
                         <input id="createTodoInput" className="form-control" onKeyPress={this.createNew.bind(this)} />
                     </div>
 
                     <div className="form-group">
-                        <label for="clearTodos">Filter items</label>
+                        <label htmlFor="clearTodos">Filter items</label>
                         <input id="clearTodos" className="form-control" value={filter} onChange={this.filter.bind(this)} />
                     </div>
 
