@@ -1,0 +1,1 @@
+{"version":3,"sources":["D:/Programming/Web Dev/exp-mobx/TodoList.css"],"names":[],"mappings":"AAAA,GACI,qBACA,cAAgB","file":"static/css/main.be36cf4d.css","sourcesContent":["ul {\r\n    list-style-type: none;\r\n    padding-left: 0;\r\n}\n\n\n// WEBPACK FOOTER //\n// ./src/D:/Programming/Web Dev/exp-mobx/TodoList.css"],"sourceRoot":""}
