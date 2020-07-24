@@ -2,5 +2,5 @@
 A quick program to experiment with MobX
 
 ## Visit
-[https://haoteng.xyz/exp-mobx/](https://haoteng.xyz/exp-mobx/)
+[https://haoteng.xyz/Exp-MobX/](https://haoteng.xyz/Exp-MobX/)
 
