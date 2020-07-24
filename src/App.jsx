@@ -16,17 +16,12 @@ export default class extends React.Component {
         }
     }
 
-    //Alternative: Call a function in the store to modify the state
-    toggleComplete(todo){
-        todo.complete = !todo.complete;
-    }
-
     render(){
         const { clearComplete, filter, filteredTodos } = this.props.store;
 
         const todoList = filteredTodos.map(todo => (
             <li key={todo.id}>
-                <input type="checkbox" value={todo.complete} checked={todo.complete} onChange={this.toggleComplete.bind(this, todo)}/> {todo.value}
+                <input type="checkbox" value={todo.complete} checked={todo.complete} onChange={() => todo.toggleComplete()}/> {todo.value}
             </li>
         ));
 
